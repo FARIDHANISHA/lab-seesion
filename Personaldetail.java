@@ -1,4 +1,6 @@
-
+@author :Faridha Nisha 
+Title : House Rent
+Qns: what is the total Amount of house Rent?
 import java.util.Scanner;
 
 // Get details about Personaldetail .. 
