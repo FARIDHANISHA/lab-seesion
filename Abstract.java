@@ -1,64 +1,73 @@
 /*Author:Faridha Nisha 
-Title:abstract
+Title:Abstract
 Question:Write the program display staff and student details using abstract & inheritance.
 */
 abstract class person // parent class
 {
-	abstract void test1();
-	abstract void test2();
-	abstract int getsalary();
+	abstract void Detail1(); //abstract method.
+	abstract void Detail2(); //abstract method.
+	abstract int getsalary(); //getmethod using in abstract.
 	
-    void test() {	// method for parent class test	
+    void Detail() // method for parent class test.
+	{		
 			System.out.println("Staff and Student details ");
 	}
-	}
-abstract class staff extends person{// child class staff  is extended from person
-	
-	void test1() {		// parent class method of test1 is override in child class
+}
+abstract class staff extends person  // child class staff  is extended from person.
+{                    
+	     @Override
+	void Detail1() 
+	{		// parent class method of test1 is override in child class.
 			System.out.println("Staff Name Sarala");
 	}
-	void test2() {		// parent class method of test2 is override in child class
+	 @Override
+	void Detail2() // parent class method of test2 is override in child class.
+	{		
             System.out.println("Staff Address");
 			System.out.println("No:35 123  st,redhills ch-52.");
 	}
-	 public int getsalary() { // parent class method of test2 is override in child class                  otyy
+	 @Override
+	public int getsalary() // parent class getter method override in child class.       
+	 {            
 		return 30000;
-	}
+	 }
 }
-class student extends staff{
-	void test4() {
+class student extends staff{ // abstract of the staff class extended  in student class.
+	void Detail4() // student class method .
+	{  
 		System.out.println("Student Address");
 		System.out.println("Student  Name Pazhani");
 	}
-	void test5() {		
+	void Detail5() // student class method .
+	{		
 			System.out.println("No:145/2 grandline, redhills chennai -52. ");
 	}
-	void test6() {		
+	void Detail6() // student class method 
+	{		
 			System.out.println("Student Fees Structure");
 	}
-	void test7( int a , int b,int c ,int d,int e) 
+	void Detail7( int a , int b,int c ,int d,int e) // student class method 
 	{		
-	System.out.println("Registration  Fees = "+a);
-	System.out.println("Admisstion Fees  = "+b);
-	System.out.println("Tution Fees  = "+c);
-	System.out.println("Transportation = "+d);
-	System.out.println("Mess fees  = "+e);
-    System.out.println("Total Amount = "+(a+b+c+d+e));
+	       System.out.println("Registration  Fees = "+a);
+	       System.out.println("Admisstion Fees  = "+b);
+	       System.out.println("Tution Fees  = "+c);
+	       System.out.println("Transportation = "+d);
+	       System.out.println("Mess fees  = "+e);
+               System.out.println("Total Amount = "+(a+b+c+d+e));
 	}
 }
 public class Abstract{
 	public static void main(String[] args) 
-	{
-			
-		student objstudent = new student();		
-		objstudent.test();
-		objstudent.test1();
-		objstudent.test2();	
-		System.out.println("Salary = " +objstudent.getsalary());
-		objstudent.test4();
-		objstudent.test5();
-		objstudent.test6();
-		objstudent.test7(500,2000,40000,10000,10000);
+	{	
+		student objstudent = new student();	// create the object in Abstract class	
+		objstudent.Detail(); // using the objstudent  in abstract person  class 
+		objstudent.Detail1();   //using the objstudent  in abstract person  class 
+		objstudent.Detail2();	//using the objstudent  in abstract person  class 
+		System.out.println("Salary = " +objstudent.getsalary()); // print the statement to get the salary of  staff 
+		objstudent.Detail4(); //using the objstudent  in abstract student  class 
+		objstudent.Detail5(); //using the objstudent  in abstract student class 
+		objstudent.Detail6(); // using the objstudent  in abstract student  class 
+		objstudent.Detail7(500,2000,40000,10000,10000);
     
 	}
 
@@ -93,69 +102,10 @@ public class Abstract{
 
 
 
-   /*abstract class person 
-{
-	abstract void test1();
-	abstract void test2();
-	abstract int getsalary();
-	
-	
-    void test() {		
-			System.out.println("Staff and Student details ");
-	}
-}
-	abstract class staff extends person{
-	
-	void test1() {		
-   			 
-	}
-	 public int getsalary() {
-		return 15000;
-	}
-	
-	void test2() {		
-			System.out.println("No:35 123  st,redhills ch-52.");
-	}
-	
 
-}
-class student extends staff{
-	
-	void test4() {
-		
-		System.out.println("Student  Name Pazhani");
-	}
-	void test5() {		
-			System.out.println("No:145/2 grantline vadakarai Or redhills chennai -52. ");
-	}
-	void test6() {		
-			System.out.println("Student Fees Structure");
-	}
-	void test7( int a , int b,int c ,int d,int e) 
-	{		
-	System.out.println("Registration  Fees = "+a);
-	System.out.println("Admisstion Fees  = "+b);
-	System.out.println("Tution Fees  = "+c);
-	System.out.println("Transportation = "+d);
-	System.out.println("Mess fees  = "+e);
-    System.out.println("Total Fees  Amount = "+(a+b+c+d+e));
-	}
-}
-public class Abstract{
-	public static void main(String[] args) 
-	{
-			
-		student objstudent = new student();		
-		objstudent.test();
-		objstudent.test1();
-		objstudent.test2();	
-		System.out.println("Salary = " +objstudent.getsalary());
-		objstudent.test4();
-		objstudent.test5();
-		objstudent.test6();
-		objstudent.test7(500,2000,40000,10000,10000);
-    
-	}
 
-}
-*/
+
+
+
+
+   
